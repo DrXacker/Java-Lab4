@@ -16,6 +16,10 @@ public class Person {
         this.salary = salary;
     }
 
+    /**
+     * Перевод элемента в читательный вид
+     * @return - строка
+     */
     public String toString() {
         return "Person{" +
                 "id=" + id +

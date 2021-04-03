@@ -10,10 +10,21 @@ public class Department {
         this.name = name;
     }
 
+    /**
+     * Метод по получению имени отдела
+     * @return - имя отдела
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * Метод проверяет есть ли в общем листе отделов конкретного интересуемого отдела. Если этого отдела
+     * не существует то добавляем его в лист, иначе передаем.
+     * @param departmentList - общий список отделов (лист)
+     * @param name - наименование отдела
+     * @return - отдел - элемент листа
+     */
     public static Department getDepartment(List<Department> departmentList, String name) {
         for (Department value : departmentList) {
             if (value.getName().equals(name)) {
