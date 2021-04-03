@@ -1,9 +1,7 @@
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class Main {
@@ -21,12 +19,8 @@ public class Main {
                         Long.parseLong(values[0]),
                         values[1],
                         values[2],
-                        new Date(
-                                Integer.parseInt(birthDate[2]),
-                                Integer.parseInt(birthDate[1]),
-                                Integer.parseInt(birthDate[0])
-                        ),
-                        DepartmentCheck.getDepartment(departmentList, values[4]),
+                        values[3],
+                        Department.getDepartment(departmentList, values[4]),
                         Long.parseLong(values[5])
                 );
                 personList.add(person);

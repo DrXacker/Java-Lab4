@@ -1,15 +1,13 @@
-import java.util.Date;
-
 public class Person {
     private static long autoId = 1;
     private long id;
     private String name;
     private String gender;
-    private Date birthDate;
+    private String birthDate;
     private Department department;
     private long salary;
 
-    public Person(long l, String name, String gender, Date birthDate, Department department, long salary) {
+    public Person(long l, String name, String gender, String birthDate, Department department, long salary) {
         this.id = autoId++;
         this.name = name;
         this.gender = gender;
@@ -24,7 +22,7 @@ public class Person {
                 ", name='" + name + '\'' +
                 ", gender='" + gender + '\'' +
                 ", birthDate=" + birthDate +
-                ", department=" + department +
+                ", department=" + department.getName() +
                 ", salary=" + salary +
                 '}';
     }

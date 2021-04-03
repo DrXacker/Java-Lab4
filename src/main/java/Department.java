@@ -13,9 +13,7 @@ public class Department {
     public String getName() {
         return name;
     }
-}
 
-class DepartmentCheck{
     public static Department getDepartment(List<Department> departmentList, String name) {
         for (Department value : departmentList) {
             if (value.getName().equals(name)) {
